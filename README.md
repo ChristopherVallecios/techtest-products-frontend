@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,49 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+=======
+# techtest-products-frontend 
+
+(backend)
+
+En el DTO de creación de producto (src/products/dto/create-product.dto.ts), se incorporó una nueva propiedad opcional isActive para indicar si el producto está activo o no.
+
+// src/products/dto/create-product.dto.ts
+
+import { Type } from 'class-transformer';
+import {
+  IsEnum,
+  IsNotEmpty,
+  IsNumber,
+  IsPositive,
+  IsString,
+  Length,
+  IsOptional,
+  IsBoolean,
+} from 'class-validator';
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
+import { ProductCategory } from '../@types/enums/product-category.enum';
+
+
+@ApiPropertyOptional({
+    description: 'Whether the product is active',
+    example: true,
+  })
+  @IsOptional()
+  @IsBoolean({ message: 'isActive must be a boolean' })
+  isActive?: boolean;
+
+
+
+En el DTO de respuesta (src/products/dto/product-summary.dto.ts), se añadió la anotación @Expose() delante de la propiedad isActive:
+
+  @Expose()
+  isActive: boolean;
+
+
+(frontend)
+
+-Instalar dependencias: 
+-Configurar variables de entorno
+-ejecutar
+>>>>>>> 7e7a126c76f6b48d9f2d5437034bda017d586c0c
