@@ -25,7 +25,7 @@ export interface Product {
   updatedAt: string;
 }
 
-// Lo que enviamos para crear un producto (POST)
+// Lo que envia para crear un producto (POST)
 export interface CreateProductDto {
   name: string;
   description: string;
@@ -34,7 +34,7 @@ export interface CreateProductDto {
   isActive?: boolean;
 }
 
-// Lo que enviamos para actualizar un producto (PATCH)
+// Lo que envia para actualizar un producto (PATCH)
 export type UpdateProductDto = Partial<CreateProductDto>;
 
 // Filtros en /products?name=...&category=...&isActive=true&page=1&perPage=10

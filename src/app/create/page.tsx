@@ -56,7 +56,7 @@ export default function CreateProductPage() {
     }
   };
 
-  // Clase compartida para todos los campos en modo oscuro
+
   const darkField =
     'w-full p-2 border border-gray-600 rounded bg-gray-800 text-white placeholder-gray-400 ' +
     'focus:outline-none focus:ring-2 focus:ring-blue-500';

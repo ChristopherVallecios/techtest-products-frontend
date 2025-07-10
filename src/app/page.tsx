@@ -191,7 +191,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* — Paginación (fija abajo) — */}
+      {/* — Paginación— */}
       {totalPages > 1 && (
         <div className="flex-shrink-0 bg-gray-800 px-6 py-4">
           <div className="max-w-7xl mx-auto flex justify-center gap-2">
